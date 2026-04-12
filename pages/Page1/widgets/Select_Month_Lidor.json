@@ -1,0 +1,54 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( moment().format('MM/YYYY')))(Select_Month_Lidor.options, Select_Month_Lidor.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDeprecated": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "f3957",
+  "label": "",
+  "labelAlignment": "right",
+  "labelKey": "month_label",
+  "labelPosition": "Top",
+  "leftColumn": 50,
+  "optionLabel": "month_label",
+  "optionValue": "month_label",
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "חודש",
+  "renderMode": "CANVAS",
+  "rightColumn": 61,
+  "serverSideFiltering": false,
+  "sourceData": "{{fetch_months_lidor.data}}",
+  "topRow": 11,
+  "type": "SELECT_WIDGET",
+  "valueKey": "month_label",
+  "version": 1,
+  "widgetId": "ama29k4oz2",
+  "widgetName": "Select_Month_Lidor"
+}

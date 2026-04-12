@@ -1,0 +1,52 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDeprecated": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ef2c5",
+  "label": "",
+  "labelAlignment": "right",
+  "labelKey": "label",
+  "labelPosition": "Top",
+  "labelText": "",
+  "leftColumn": 23,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "מטפל",
+  "renderMode": "CANVAS",
+  "rightColumn": 33,
+  "serverSideFiltering": false,
+  "sourceData": "{{fetch_lidor_by_agent.data.map(r => ({label: r[\"מטפל\"], value: r[\"מטפל\"]}))}}",
+  "topRow": 11,
+  "type": "SELECT_WIDGET",
+  "valueKey": "value",
+  "version": 1,
+  "widgetId": "rmru2m4xsi",
+  "widgetName": "Select_Agent"
+}

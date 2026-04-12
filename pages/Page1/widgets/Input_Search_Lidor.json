@@ -1,0 +1,48 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultText": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "iconSVG": "/static/media/icon.2bdb82e4c714c1ecdf91eb62b2ef5e7f.svg",
+  "inputType": "TEXT",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isSpellCheck": false,
+  "isVisible": true,
+  "key": "53317",
+  "label": "",
+  "labelAlignment": "right",
+  "labelPosition": "Top",
+  "leftColumn": 0,
+  "onTextChanged": "{{fetch_lidor_leads.run()}}",
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "חיפוש שם / ת.ז...",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "rightColumn": 9,
+  "topRow": 11,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "lco39of609",
+  "widgetName": "Input_Search_Lidor"
+}

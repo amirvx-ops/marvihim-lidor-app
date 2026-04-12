@@ -1,0 +1,51 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDeprecated": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "f1caa",
+  "label": "",
+  "labelAlignment": "right",
+  "labelKey": "label",
+  "labelPosition": "Top",
+  "leftColumn": 36,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "מקור",
+  "renderMode": "CANVAS",
+  "rightColumn": 46,
+  "serverSideFiltering": false,
+  "sourceData": "{{fetch_lidor_by_source.data.map(r => ({label: r[\"מקור\"], value: r[\"מקור\"]}))}}",
+  "topRow": 11,
+  "type": "SELECT_WIDGET",
+  "valueKey": "value",
+  "version": 1,
+  "widgetId": "po7q4rdxvm",
+  "widgetName": "Select_Source"
+}
