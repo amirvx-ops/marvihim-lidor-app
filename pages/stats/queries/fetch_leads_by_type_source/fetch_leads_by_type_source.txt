@@ -1,0 +1,11 @@
+SELECT
+  COALESCE(p.name, 'לא ידוע') AS מקור,
+  l.type AS סוג_ליד,
+  COUNT(DISTINCT c.identity_number) AS לידים
+FROM leads l
+JOIN customers c ON l.customer_id = c.id
+LEFT JOIN partners p ON COALESCE(l.partner_id, c.primary_partner_id) = p.id
+WHERE l.type != 'בדיקת תיק מלאה'
+AND l.type IS NOT NULL
+GROUP BY p.name, l.type
+ORDER BY מקור, סוג_ליד;
