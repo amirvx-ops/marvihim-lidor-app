@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  COALESCE(p.name, 'לא ידוע') AS מקור,\n  COUNT(DISTINCT CASE WHEN DATE(l.created_at) = CURRENT_DATE \n    THEN c.identity_number END) AS היום,\n  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('week', CURRENT_DATE) \n    THEN c.identity_number END) AS השבוע,\n  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('month', CURRENT_DATE) \n    THEN c.identity_number END) AS החודש\nFROM leads l\nJOIN customers c ON l.customer_id = c.id\nLEFT JOIN partners p ON COALESCE(l.partner_id, c.primary_partner_id) = p.id\nWHERE l.type != 'בדיקת תיק מלאה'\nAND l.type IS NOT NULL\nGROUP BY p.name\nORDER BY החודש DESC;",
+      "body": "SELECT\n  COALESCE(p.name, 'לא ידוע') AS מקור,\n  COUNT(DISTINCT CASE WHEN DATE(l.created_at) = CURRENT_DATE\n    THEN c.identity_number END) AS היום,\n  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('week', CURRENT_DATE)\n    THEN c.identity_number END) AS השבוע,\n  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('month', CURRENT_DATE)\n    THEN c.identity_number END) AS החודש\nFROM leads l\nJOIN customers c ON l.customer_id = c.id\nLEFT JOIN partners p ON COALESCE(l.partner_id, c.primary_partner_id) = p.id\nWHERE l.type != 'בדיקת תיק מלאה'\nAND l.type IS NOT NULL\nGROUP BY p.name\nORDER BY החודש DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
