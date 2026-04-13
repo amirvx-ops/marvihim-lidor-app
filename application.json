@@ -18,11 +18,11 @@
   "icon": "burger",
   "pages": [
     {
-      "id": "Page1",
+      "id": "main table",
       "isDefault": true
     },
     {
-      "id": "Page2",
+      "id": "stats",
       "isDefault": false
     }
   ],
