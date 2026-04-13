@@ -16,7 +16,7 @@
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "lbt01",
+  "key": "bst01",
   "leftColumn": 0,
   "overflow": "NONE",
   "parentColumnSpace": 1,
@@ -24,13 +24,13 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 64,
-  "text": "לידים לפי סוג ומקור (ללא בדיקת תיק מלאה)",
+  "text": "לידים לפי מקור",
   "textAlign": "RIGHT",
   "textColor": "#231F20",
   "topRow": 57,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "stats_lbt_title",
-  "widgetName": "Text_LeadsByTypeTitle"
+  "widgetId": "stats_bst_title",
+  "widgetName": "Text_BySourceTitle"
 }

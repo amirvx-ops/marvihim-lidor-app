@@ -1,0 +1,15 @@
+SELECT
+  COALESCE(p.name, 'לא ידוע') AS מקור,
+  COUNT(DISTINCT CASE WHEN DATE(l.created_at) = CURRENT_DATE
+    THEN c.identity_number END) AS היום,
+  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('week', CURRENT_DATE)
+    THEN c.identity_number END) AS השבוע,
+  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('month', CURRENT_DATE)
+    THEN c.identity_number END) AS החודש
+FROM leads l
+JOIN customers c ON l.customer_id = c.id
+LEFT JOIN partners p ON COALESCE(l.partner_id, c.primary_partner_id) = p.id
+WHERE l.type != 'בדיקת תיק מלאה'
+AND l.type IS NOT NULL
+GROUP BY p.name
+ORDER BY החודש DESC;
