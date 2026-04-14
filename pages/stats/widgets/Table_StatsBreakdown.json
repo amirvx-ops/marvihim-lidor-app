@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 55,
+  "bottomRow": 69,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -32,12 +32,18 @@
   },
   "columnOrder": [
     "תאריך",
-    "מסלקה",
     "פגישות",
+    "מסלקה",
     "סגירות",
     "סכום_סגירות"
   ],
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1776190076185,
+  "columnWidthMap": {
+    "מסלקה": 85,
+    "סגירות": 79,
+    "פגישות": 98,
+    "תאריך": 100
+  },
   "defaultPageSize": 10,
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
@@ -92,7 +98,7 @@
   "isVisibleSearch": true,
   "key": "tb001",
   "label": "Data",
-  "leftColumn": 0,
+  "leftColumn": 7,
   "needsHeightForContent": true,
   "parentColumnSpace": 1,
   "parentId": "0",
@@ -250,12 +256,12 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 64,
+  "rightColumn": 32,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{fetch_lidor_daily_breakdown.data}}",
   "textSize": "0.875rem",
-  "topRow": 23,
+  "topRow": 27,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 90,
+  "bottomRow": 69,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -39,20 +39,40 @@
   "columnWidthMap": {},
   "defaultPageSize": 10,
   "defaultSelectedRowIndex": 0,
-  "defaultSelectedRowIndices": [0],
+  "defaultSelectedRowIndices": [
+    0
+  ],
   "delimiter": ",",
   "dynamicBindingPathList": [
-    { "key": "accentColor" },
-    { "key": "borderRadius" },
-    { "key": "boxShadow" },
-    { "key": "tableData" },
-    { "key": "primaryColumns.מקור.computedValue" },
-    { "key": "primaryColumns.היום.computedValue" },
-    { "key": "primaryColumns.השבוע.computedValue" },
-    { "key": "primaryColumns.החודש.computedValue" }
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.מקור.computedValue"
+    },
+    {
+      "key": "primaryColumns.היום.computedValue"
+    },
+    {
+      "key": "primaryColumns.השבוע.computedValue"
+    },
+    {
+      "key": "primaryColumns.החודש.computedValue"
+    }
   ],
   "dynamicPropertyPathList": [
-    { "key": "tableData" }
+    {
+      "key": "tableData"
+    }
   ],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
@@ -68,25 +88,25 @@
   "isVisibleSearch": true,
   "key": "bst02",
   "label": "Data",
-  "leftColumn": 0,
+  "leftColumn": 34,
   "needsHeightForContent": true,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "מקור": {
-      "alias": "מקור",
+    "החודש": {
+      "alias": "החודש",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table_BySource.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"מקור\"]))}}",
+      "columnType": "number",
+      "computedValue": "{{Table_BySource.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"החודש\"]))}}",
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "RIGHT",
-      "id": "מקור",
-      "index": 0,
+      "id": "החודש",
+      "index": 3,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -95,14 +115,14 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "מקור",
-      "originalId": "מקור",
+      "label": "החודש",
+      "originalId": "החודש",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 150
+      "width": 100
     },
     "היום": {
       "alias": "היום",
@@ -164,19 +184,19 @@
       "verticalAlignment": "CENTER",
       "width": 100
     },
-    "החודש": {
-      "alias": "החודש",
+    "מקור": {
+      "alias": "מקור",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{Table_BySource.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"החודש\"]))}}",
+      "columnType": "text",
+      "computedValue": "{{Table_BySource.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"מקור\"]))}}",
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "RIGHT",
-      "id": "החודש",
-      "index": 3,
+      "id": "מקור",
+      "index": 0,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -185,23 +205,23 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "החודש",
-      "originalId": "החודש",
+      "label": "מקור",
+      "originalId": "מקור",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 100
+      "width": 150
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 64,
+  "rightColumn": 62,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{fetch_leads_by_source_period.data}}",
   "textSize": "0.875rem",
-  "topRow": 61,
+  "topRow": 27,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

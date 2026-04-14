@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 27,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -12,38 +12,31 @@
     },
     {
       "key": "truncateButtonColor"
-    },
-    {
-      "key": "text"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "text"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "wv04",
-  "leftColumn": 28,
+  "key": "bst01",
+  "leftColumn": 17,
   "overflow": "NONE",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 38,
-  "text": "{{Number(fetch_lidor_weekly.data[0].סכום_סגירות || 0).toLocaleString()}}₪",
-  "textAlign": "CENTER",
-  "textColor": "#22c55e",
-  "topRow": 18,
+  "rightColumn": 32,
+  "text": "סיכום פעילות",
+  "textAlign": "RIGHT",
+  "textColor": "#231F20",
+  "topRow": 24,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "stats_wv04",
-  "widgetName": "Week_Amount"
+  "widgetId": "jnuik6hmyl",
+  "widgetName": "Text_BySourceTitleCopy"
 }

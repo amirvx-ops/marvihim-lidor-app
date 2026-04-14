@@ -1,12 +1,18 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 95,
+  "bottomRow": 72,
   "disableLink": false,
   "dynamicBindingPathList": [
-    { "key": "fontFamily" },
-    { "key": "borderRadius" },
-    { "key": "truncateButtonColor" }
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "truncateButtonColor"
+    }
   ],
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
@@ -17,17 +23,17 @@
   "isLoading": false,
   "isVisible": true,
   "key": "btt01",
-  "leftColumn": 0,
+  "leftColumn": 53,
   "overflow": "NONE",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 64,
+  "rightColumn": 62,
   "text": "לידים לפי סוג ליד",
   "textAlign": "RIGHT",
   "textColor": "#231F20",
-  "topRow": 92,
+  "topRow": 69,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
