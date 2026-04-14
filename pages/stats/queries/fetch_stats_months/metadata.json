@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT DISTINCT month_label FROM (\n  SELECT TO_CHAR(created_at, 'MM/YYYY') AS month_label FROM leads WHERE created_at IS NOT NULL\n  UNION\n  SELECT TO_CHAR(update_date, 'MM/YYYY') FROM lidor_leads_view WHERE touched_by_lidor = TRUE AND update_date IS NOT NULL\n) x\nORDER BY TO_DATE(month_label, 'MM/YYYY') DESC;\n",
+      "body": "SELECT month_label FROM (\n  SELECT TO_CHAR(created_at, 'MM/YYYY') AS month_label FROM leads WHERE created_at IS NOT NULL\n  UNION\n  SELECT TO_CHAR(update_date, 'MM/YYYY') FROM lidor_leads_view WHERE touched_by_lidor = TRUE AND update_date IS NOT NULL\n) x\nORDER BY TO_DATE(month_label, 'MM/YYYY') DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,11 +22,7 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "fetch_stats_months",
     "pageId": "stats",
     "runBehaviour": "AUTOMATIC",

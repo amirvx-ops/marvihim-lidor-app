@@ -14,11 +14,17 @@
     },
     {
       "key": "options"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "options"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -42,7 +48,7 @@
   "renderMode": "CANVAS",
   "rightColumn": 40,
   "serverSideFiltering": false,
-  "sourceData": "",
+  "sourceData": "{{fetch_stats_months.data.map( (obj) =>{ return  {'label': obj.month_label, 'value': obj.month_label } })}}",
   "topRow": 0,
   "type": "SELECT_WIDGET",
   "valueKey": "value",
