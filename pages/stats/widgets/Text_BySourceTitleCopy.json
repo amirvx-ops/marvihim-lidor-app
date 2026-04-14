@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 27,
+  "bottomRow": 37,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -30,10 +30,10 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 32,
-  "text": "סיכום פעילות",
+  "text": "סיכום פעילות יומי (החודש)",
   "textAlign": "RIGHT",
   "textColor": "#231F20",
-  "topRow": 24,
+  "topRow": 34,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
