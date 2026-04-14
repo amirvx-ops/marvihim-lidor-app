@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "WITH params AS (\n  SELECT CASE\n    WHEN '{{Select_Stats_Month.selectedOptionValue}}' = '' THEN CURRENT_DATE\n    WHEN TO_CHAR(CURRENT_DATE, 'MM/YYYY') = '{{Select_Stats_Month.selectedOptionValue}}' THEN CURRENT_DATE\n    ELSE (TO_DATE('{{Select_Stats_Month.selectedOptionValue}}', 'MM/YYYY') + INTERVAL '1 month - 1 day')::date\n  END AS ref_date\n)\nSELECT\n  COUNT(*) FILTER (WHERE lidor_status = 'הוזמנה מסלקה') AS מסלקה,\n  COUNT(*) FILTER (WHERE lidor_status = 'נקבעה פגישה') AS פגישות,\n  COUNT(*) FILTER (WHERE deal_closed = 'כן') AS סגירות,\n  COALESCE(SUM(closing_amount) FILTER (WHERE deal_closed = 'כן'), 0) AS סכום_סגירות\nFROM lidor_leads_view\nWHERE touched_by_lidor = TRUE\nAND update_date = (SELECT ref_date FROM params);",
+      "body": "WITH params AS (\n  SELECT CASE\n    WHEN '{{Select_Stats_Month.selectedOptionValue}}' = '' THEN CURRENT_DATE\n    WHEN TO_CHAR(CURRENT_DATE, 'MM/YYYY') = '{{Select_Stats_Month.selectedOptionValue}}' THEN CURRENT_DATE\n    ELSE (TO_DATE('{{Select_Stats_Month.selectedOptionValue}}', 'MM/YYYY') + INTERVAL '1 month - 1 day')::date\n  END AS ref_date\n)\nSELECT\n  COUNT(*) FILTER (WHERE lidor_status = 'הוזמנה מסלקה') AS מסלקה,\n  COUNT(*) FILTER (WHERE lidor_status = 'נקבעה פגישה') AS פגישות,\n  COUNT(*) FILTER (WHERE deal_closed = 'כן') AS סגירות,\n  COALESCE(SUM(closing_amount) FILTER (WHERE deal_closed = 'כן'), 0) AS סכום_סגירות\nFROM lidor_leads_view\nWHERE touched_by_lidor = TRUE\nAND update_date = (SELECT ref_date FROM params);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
