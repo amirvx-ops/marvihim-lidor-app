@@ -1,10 +1,19 @@
+WITH params AS (
+  SELECT CASE
+    WHEN '{{Select_Stats_Month.selectedOptionValue}}' = '' THEN CURRENT_DATE
+    WHEN TO_CHAR(CURRENT_DATE, 'MM/YYYY') = '{{Select_Stats_Month.selectedOptionValue}}' THEN CURRENT_DATE
+    ELSE (TO_DATE('{{Select_Stats_Month.selectedOptionValue}}', 'MM/YYYY') + INTERVAL '1 month - 1 day')::date
+  END AS ref_date
+)
 SELECT
   l.type AS סוג_ליד,
-  COUNT(DISTINCT CASE WHEN DATE(l.created_at) = CURRENT_DATE
+  COUNT(DISTINCT CASE WHEN DATE(l.created_at) = (SELECT ref_date FROM params)
     THEN c.identity_number END) AS היום,
-  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('week', CURRENT_DATE)
+  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('week', (SELECT ref_date FROM params))
+    AND l.created_at < DATE_TRUNC('week', (SELECT ref_date FROM params)) + INTERVAL '1 week'
     THEN c.identity_number END) AS השבוע,
-  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('month', CURRENT_DATE)
+  COUNT(DISTINCT CASE WHEN l.created_at >= DATE_TRUNC('month', (SELECT ref_date FROM params))
+    AND l.created_at < DATE_TRUNC('month', (SELECT ref_date FROM params)) + INTERVAL '1 month'
     THEN c.identity_number END) AS החודש
 FROM leads l
 JOIN customers c ON l.customer_id = c.id

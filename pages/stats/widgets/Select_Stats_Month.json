@@ -1,0 +1,51 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDeprecated": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "stmsel",
+  "label": "",
+  "labelAlignment": "right",
+  "labelKey": "label",
+  "labelPosition": "Top",
+  "leftColumn": 50,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "בחר חודש",
+  "renderMode": "CANVAS",
+  "rightColumn": 63,
+  "serverSideFiltering": false,
+  "sourceData": "{{fetch_stats_months.data.map(m => ({label: m.month_label, value: m.month_label}))}}",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "valueKey": "value",
+  "version": 1,
+  "widgetId": "select_stats_month_01",
+  "widgetName": "Select_Stats_Month"
+}
