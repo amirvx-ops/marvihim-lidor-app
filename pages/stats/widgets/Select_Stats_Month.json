@@ -13,12 +13,12 @@
       "key": "borderRadius"
     },
     {
-      "key": "sourceData"
+      "key": "options"
     }
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "sourceData"
+      "key": "options"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -34,6 +34,7 @@
   "leftColumn": 31,
   "optionLabel": "label",
   "optionValue": "value",
+  "options": "{{fetch_stats_months.data.map(m => ({label: m.month_label, value: m.month_label}))}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -41,7 +42,7 @@
   "renderMode": "CANVAS",
   "rightColumn": 40,
   "serverSideFiltering": false,
-  "sourceData": "\"options\": \"{{fetch_stats_months.data.map(m => ({label: m.month_label, value: m.month_label}))}}\"",
+  "sourceData": "",
   "topRow": 0,
   "type": "SELECT_WIDGET",
   "valueKey": "value",
