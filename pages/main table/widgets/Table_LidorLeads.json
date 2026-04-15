@@ -266,7 +266,7 @@
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
-      "onSave": "{{update_lidor_lead.run().then(() => {\n  update_lidor_lead.run({\n    \"lead_id\": \"{{Table_LidorLeads.updatedRow.lead_id}}\",\n    \"meeting_date\": \"{{Table_LidorLeads.updatedRow.meeting_date}}\",\n    \"meeting_time\": \"{{Table_LidorLeads.updatedRow.meeting_time}}\",\n    \"agent\": \"{{Table_LidorLeads.updatedRow.agent}}\",\n    \"lead_passed\": \"{{Table_LidorLeads.updatedRow.lead_passed}}\",\n    \"is_couple\": \"{{Table_LidorLeads.updatedRow.is_couple}}\",\n    \"deal_closed\": \"{{Table_LidorLeads.updatedRow.deal_closed}}\",\n    \"status\": \"{{Table_LidorLeads.updatedRow.status}}\",\n    \"notes\": \"{{Table_LidorLeads.updatedRow.notes}}\"\n  });\n});}}",
+      "onSave": "{{update_lidor_lead.run().then(() => {\n  fetch_lidor_leads.run();\n});}}",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{Table_LidorLeads.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
