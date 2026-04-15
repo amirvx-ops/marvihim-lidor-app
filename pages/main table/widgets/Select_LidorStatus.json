@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 15,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "/",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -37,6 +37,7 @@
   "labelPosition": "Top",
   "labelText": "",
   "labelTextSize": "0.875rem",
+  "labelTooltip": "",
   "labelWidth": 5,
   "leftColumn": 11,
   "maxDynamicHeight": 9000,
@@ -58,7 +59,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 20,
   "serverSideFiltering": false,
-  "sourceData": "{{[{label: \"הכל\", value: \"\"}, {label: \"נקבעה פגישה\", value: \"נקבעה פגישה\"}, {label: \"אין מענה\", value: \"אין מענה\"}, {label: \"לא מעוניין\", value: \"לא מעוניין\"}, {label: \"לא רלוונטי\", value: \"לא רלוונטי\"}, {label: \"לא הגיעה מסלקה\", value: \"לא הגיעה מסלקה\"}, {label: \"הוזמנה מסלקה\", value: \"הוזמנה מסלקה\"}]}}",
+  "sourceData": "{{[{label: \"נקבעה פגישה\", value: \"נקבעה פגישה\"}, {label: \"אין מענה\", value: \"אין מענה\"}, {label: \"לא מעוניין\", value: \"לא מעוניין\"}, {label: \"לא רלוונטי\", value: \"לא רלוונטי\"}, {label: \"לא הגיעה מסלקה\", value: \"לא הגיעה מסלקה\"}, {label: \"הוזמנה מסלקה\", value: \"הוזמנה מסלקה\"}]}}\n",
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,
