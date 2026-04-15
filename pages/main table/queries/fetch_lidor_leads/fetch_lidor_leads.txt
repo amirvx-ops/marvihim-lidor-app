@@ -13,6 +13,8 @@ OR (
          OR source = '{{Select_Source.selectedOptionValue}}')
     AND ('{{Select_Agent.selectedOptionValue}}' = ''
          OR agent = '{{Select_Agent.selectedOptionValue}}')
+    AND (COALESCE('{{Select_LidorStatus.selectedOptionValue}}', '') = ''
+         OR lidor_status = '{{Select_LidorStatus.selectedOptionValue}}')
 )
 ORDER BY update_date DESC NULLS LAST
 LIMIT 200;
