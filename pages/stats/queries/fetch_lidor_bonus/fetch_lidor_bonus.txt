@@ -7,19 +7,19 @@ WITH params AS (
 )
 SELECT
   TO_CHAR((SELECT ref_date FROM params), 'MM/YYYY') AS חודש,
-  COUNT(DISTINCT CASE WHEN lead_passed = TRUE
+  COUNT(DISTINCT CASE WHEN meeting_held = 'כן'
     AND DATE_TRUNC('month', update_date) = DATE_TRUNC('month', (SELECT ref_date FROM params))
-    THEN lead_id END) AS לידים_עברו,
+    THEN lead_id END) AS פגישות,
   COUNT(DISTINCT CASE WHEN close_date IS NOT NULL
     AND DATE_TRUNC('month', close_date) = DATE_TRUNC('month', (SELECT ref_date FROM params))
     THEN lead_id END) AS סגירות,
-  COUNT(DISTINCT CASE WHEN lead_passed = TRUE
+  COUNT(DISTINCT CASE WHEN meeting_held = 'כן'
     AND DATE_TRUNC('month', update_date) = DATE_TRUNC('month', (SELECT ref_date FROM params))
-    THEN lead_id END) * 20 AS בונוס_לידים,
+    THEN lead_id END) * 20 AS בונוס_פגישות,
   COUNT(DISTINCT CASE WHEN close_date IS NOT NULL
     AND DATE_TRUNC('month', close_date) = DATE_TRUNC('month', (SELECT ref_date FROM params))
     THEN lead_id END) * 50 AS בונוס_סגירות,
-  (COUNT(DISTINCT CASE WHEN lead_passed = TRUE
+  (COUNT(DISTINCT CASE WHEN meeting_held = 'כן'
     AND DATE_TRUNC('month', update_date) = DATE_TRUNC('month', (SELECT ref_date FROM params))
     THEN lead_id END) * 20) +
   (COUNT(DISTINCT CASE WHEN close_date IS NOT NULL
