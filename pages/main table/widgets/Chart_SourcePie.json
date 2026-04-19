@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 165,
+  "bottomRow": 167,
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "chartData": {
     "default": {
@@ -40,7 +40,7 @@
   "isVisible": true,
   "key": "ch003",
   "labelOrientation": "auto",
-  "leftColumn": 33,
+  "leftColumn": 34,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -48,7 +48,7 @@
   "rightColumn": 64,
   "setAdaptiveYMin": false,
   "showDataPointLabel": true,
-  "topRow": 137,
+  "topRow": 139,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "juoii549ij",
