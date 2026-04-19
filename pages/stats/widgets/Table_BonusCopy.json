@@ -32,13 +32,13 @@
   },
   "columnOrder": [
     "חודש",
-    "לידים_עברו",
     "סגירות",
-    "בונוס_לידים",
     "בונוס_סגירות",
-    "סה_כ_בונוס"
+    "סה_כ_בונוס",
+    "xn__6dbgl6b1ah",
+    "xn____1hcekac1a6ck5a1dn"
   ],
-  "columnUpdatedAt": 1776253768134,
+  "columnUpdatedAt": 1776607384440,
   "columnWidthMap": {
     "בונוס_לידים": 108,
     "בונוס_סגירות": 108,
@@ -66,13 +66,7 @@
       "key": "primaryColumns.חודש.computedValue"
     },
     {
-      "key": "primaryColumns.לידים_עברו.computedValue"
-    },
-    {
       "key": "primaryColumns.סגירות.computedValue"
-    },
-    {
-      "key": "primaryColumns.בונוס_לידים.computedValue"
     },
     {
       "key": "primaryColumns.בונוס_סגירות.computedValue"
@@ -82,6 +76,12 @@
     },
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.xn__6dbgl6b1ah.computedValue"
+    },
+    {
+      "key": "primaryColumns.xn____1hcekac1a6ck5a1dn.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -109,18 +109,54 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "בונוס_לידים": {
-      "alias": "בונוס_לידים",
+    "xn__6dbgl6b1ah": {
+      "alias": "פגישות",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{Table_BonusCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"בונוס_לידים\"]))}}",
+      "computedValue": "{{(() => { const tableData = Table_BonusCopy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"פגישות\"])) : פגישות })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "RIGHT",
-      "id": "בונוס_לידים",
+      "id": "xn__6dbgl6b1ah",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "פגישות",
+      "notation": "standard",
+      "originalId": "פגישות",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "xn____1hcekac1a6ck5a1dn": {
+      "alias": "בונוס_פגישות",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table_BonusCopy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"בונוס_פגישות\"])) : בונוס_פגישות })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "RIGHT",
+      "id": "xn____1hcekac1a6ck5a1dn",
       "index": 3,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -130,14 +166,16 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "בונוס לידים",
-      "originalId": "בונוס_לידים",
+      "label": "בונוס_פגישות",
+      "notation": "standard",
+      "originalId": "בונוס_פגישות",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 110
+      "width": 150
     },
     "בונוס_סגירות": {
       "alias": "בונוס_סגירות",
@@ -192,36 +230,6 @@
       "isVisible": true,
       "label": "חודש",
       "originalId": "חודש",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 100
-    },
-    "לידים_עברו": {
-      "alias": "לידים_עברו",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{Table_BonusCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"לידים_עברו\"]))}}",
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
-      "id": "לידים_עברו",
-      "index": 1,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "לידים עברו",
-      "originalId": "לידים_עברו",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -294,7 +302,7 @@
   "rightColumn": 32,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
-  "tableData": "{{fecth_lidor_bonus_all.data}}",
+  "tableData": "{{fetch_lidor_bonus.data}}",
   "textSize": "0.875rem",
   "topRow": 83,
   "totalRecordsCount": 0,

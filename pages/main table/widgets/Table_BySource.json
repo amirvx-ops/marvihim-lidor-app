@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 165,
+  "bottomRow": 167,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -296,7 +296,7 @@
   "serverSidePaginationEnabled": true,
   "tableData": "{{fetch_lidor_by_source.data}}",
   "textSize": "0.875rem",
-  "topRow": 137,
+  "topRow": 139,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

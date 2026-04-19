@@ -31,7 +31,7 @@
   "labelAlignment": "right",
   "labelKey": "label",
   "labelPosition": "Top",
-  "leftColumn": 44,
+  "leftColumn": 35,
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 1,
@@ -39,13 +39,13 @@
   "parentRowSpace": 10,
   "placeholderText": "מקור",
   "renderMode": "CANVAS",
-  "rightColumn": 52,
+  "rightColumn": 43,
   "serverSideFiltering": false,
   "sourceData": "{{fetch_lidor_by_source.data.map(r => ({label: r[\"מקור\"], value: r[\"מקור\"]}))}}",
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "valueKey": "value",
   "version": 1,
-  "widgetId": "po7q4rdxvm",
-  "widgetName": "Select_Source"
+  "widgetId": "lsvfbtkvm6",
+  "widgetName": "closed_deal"
 }
