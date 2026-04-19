@@ -13,8 +13,10 @@ OR (
          OR source = '{{Select_Source.selectedOptionValue}}')
     AND ('{{Select_Agent.selectedOptionValue}}' = ''
          OR agent = '{{Select_Agent.selectedOptionValue}}')
-    AND (COALESCE('{{Select_LidorStatus.selectedOptionValue}}', '') = ''
+    AND (NULLIF('{{Select_LidorStatus.selectedOptionValue}}', '') IS NULL
          OR lidor_status = '{{Select_LidorStatus.selectedOptionValue}}')
+    AND (NULLIF('{{closed_deals.selectedOptionValue}}', '') IS NULL
+         OR deal_closed = '{{closed_deals.selectedOptionValue}}')
 )
 ORDER BY update_date DESC NULLS LAST
 LIMIT 200;

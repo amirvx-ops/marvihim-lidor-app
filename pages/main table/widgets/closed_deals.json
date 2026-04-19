@@ -21,7 +21,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDeprecated": false,
   "isFilterable": true,
   "isLoading": false,
@@ -32,20 +36,21 @@
   "labelKey": "label",
   "labelPosition": "Top",
   "leftColumn": 35,
+  "onOptionChange": "{{fetch_lidor_leads.run()}}",
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
-  "placeholderText": "מקור",
+  "placeholderText": "עסקה נסגרה",
   "renderMode": "CANVAS",
   "rightColumn": 43,
   "serverSideFiltering": false,
-  "sourceData": "{{fetch_lidor_by_source.data.map(r => ({label: r[\"מקור\"], value: r[\"מקור\"]}))}}",
+  "sourceData": "{{[{label: \"כן\", value: \"כן\"}, {label: \"לא\", value: \"לא\"}]}}",
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "valueKey": "value",
   "version": 1,
   "widgetId": "lsvfbtkvm6",
-  "widgetName": "closed_deal"
+  "widgetName": "closed_deals"
 }
