@@ -4,16 +4,21 @@ WITH params AS (
     WHEN TO_CHAR(CURRENT_DATE, 'MM/YYYY') = '{{Select_Stats_Month.selectedOptionValue}}' THEN CURRENT_DATE
     ELSE (TO_DATE('{{Select_Stats_Month.selectedOptionValue}}', 'MM/YYYY') + INTERVAL '1 month - 1 day')::date
   END AS ref_date
+),
+week_bounds AS (
+  SELECT
+    (DATE_TRUNC('week', (SELECT ref_date FROM params) + INTERVAL '1 day') - INTERVAL '1 day')::date AS week_start,
+    (DATE_TRUNC('week', (SELECT ref_date FROM params) + INTERVAL '1 day') + INTERVAL '5 days')::date AS week_end
 )
 SELECT
-  COUNT(*) FILTER (WHERE masleka_date >= DATE_TRUNC('week', (SELECT ref_date FROM params))
-    AND masleka_date < DATE_TRUNC('week', (SELECT ref_date FROM params)) + INTERVAL '1 week') AS מסלקה,
+  COUNT(*) FILTER (WHERE masleka_date >= (SELECT week_start FROM week_bounds)
+    AND masleka_date <= (SELECT week_end FROM week_bounds)) AS מסלקה,
   COUNT(*) FILTER (WHERE lidor_status = 'נקבעה פגישה'
-    AND update_date >= DATE_TRUNC('week', (SELECT ref_date FROM params))
-    AND update_date < DATE_TRUNC('week', (SELECT ref_date FROM params)) + INTERVAL '1 week') AS פגישות,
-  COUNT(*) FILTER (WHERE close_date >= DATE_TRUNC('week', (SELECT ref_date FROM params))
-    AND close_date < DATE_TRUNC('week', (SELECT ref_date FROM params)) + INTERVAL '1 week') AS סגירות,
-  COALESCE(SUM(closing_amount) FILTER (WHERE close_date >= DATE_TRUNC('week', (SELECT ref_date FROM params))
-    AND close_date < DATE_TRUNC('week', (SELECT ref_date FROM params)) + INTERVAL '1 week'), 0) AS סכום_סגירות
+    AND update_date >= (SELECT week_start FROM week_bounds)
+    AND update_date <= (SELECT week_end FROM week_bounds)) AS פגישות,
+  COUNT(*) FILTER (WHERE close_date >= (SELECT week_start FROM week_bounds)
+    AND close_date <= (SELECT week_end FROM week_bounds)) AS סגירות,
+  COALESCE(SUM(closing_amount) FILTER (WHERE close_date >= (SELECT week_start FROM week_bounds)
+    AND close_date <= (SELECT week_end FROM week_bounds)), 0) AS סכום_סגירות
 FROM lidor_leads_view
 WHERE touched_by_lidor = TRUE;
