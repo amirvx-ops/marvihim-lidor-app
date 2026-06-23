@@ -24,6 +24,10 @@
     {
       "id": "stats",
       "isDefault": false
+    },
+    {
+      "id": "היסטוריית פעולות",
+      "isDefault": false
     }
   ],
   "unpublishedApplicationDetail": {

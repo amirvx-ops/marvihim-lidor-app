@@ -1,0 +1,1 @@
+SELECT * FROM lidor_activity_view ORDER BY תאריך_פעולה DESC LIMIT 200
